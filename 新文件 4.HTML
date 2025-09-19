@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>日盛國際聯合稅務記帳士事務所</title>
+  <style>
+    body {
+      font-family: "微軟正黑體", sans-serif;
+      margin: 0;
+      background-color: #f4f4f4;
+      color: #333;
+    }
+    header {
+      background-color: #002d5c;
+      color: white;
+      padding: 30px 20px;
+      text-align: center;
+    }
+    nav {
+      background-color: #004080;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    nav a {
+      color: white;
+      padding: 15px 25px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background-color 0.3s;
+    }
+    nav a:hover {
+      background-color: #0066cc;
+    }
+
+    /* 五行色彩框樣式 */
+    .info-box {
+      border-radius: 12px;
+      padding: 20px;
+      margin: 30px auto;
+      max-width: 1000px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      transition: all 0.3s ease;
+      cursor: pointer;
+    }
+    .info-box h2 {
+      margin: 0;
+      padding: 10px;
+      font-size: 1.4em;
+      border-bottom: 2px solid rgba(0,0,0,0.1);
+    }
+    .info-content {
+      display: none;
+      padding: 15px;
+    }
+
+    /* 五行色彩分類 */
+    .wood { background-color: #e6f4e6; border-left: 8px solid #4CAF50; }
+    .fire { background-color: #ffe6e6; border-left: 8px solid #f44336; }
+    .earth { background-color: #fff9e6; border-left: 8px solid #FF9800; }
+    .metal { background-color: #f0f0f0; border-left: 8px solid #9E9E9E; }
+    .water { background-color: #e6f0ff; border-left: 8px solid #2196F3; }
+
+    /* 連結樣式 */
+    a { color: #004080; text-decoration: underline; }
+    a:hover { color: #0078D7; }
+
+    /* 聯絡區塊與 footer 保留原樣式 */
+    #contact {
+      padding: 40px 20px;
+      max-width: 1000px;
+      margin: auto;
+      background-color: white;
+      box-shadow: 0 0 10px rgba(0,0,0,0.05);
+      margin-top: 30px;
+    }
+    #contact h2 {
+      color: #004080;
+      border-bottom: 2px solid #ccc;
+      padding-bottom: 10px;
+    }
+    footer {
+      background-color: #002d5c;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>日盛國際聯合稅務記帳士事務所</h1>
+    <p>專業．誠信．效率 — 您的財務與稅務夥伴</p>
+  </header>
+
+  <nav>
+    <a href="#about">關於我們</a>
+    <a href="#services">服務項目</a>
+    <a href="#news">最新消息</a>
+    <a href="#faq">常見問答</a>
+    <a href="#links">網站連結</a>
+    <a href="#contact">與我聯絡</a>
+  </nav>
+
+  <!-- 關於我們（屬土） -->
+  <section id="about" class="info-box earth" onclick="toggleContent(this)">
+    <h2>關於我們</h2>
+    <div class="info-content">
+      <p>本事務所由多位資深記帳士與稅務顧問組成，專注於中小企業與個人財務管理，提供全方位記帳、報稅、工商登記等專業服務。我們秉持誠信原則，致力於成為客戶最可靠的財務夥伴。</p>
+    </div>
+  </section>
+
+  <!-- 服務項目（屬木） -->
+  <section id="services" class="info-box wood" onclick="toggleContent(this)">
+    <h2>服務項目</h2>
+    <div class="info-content">
+      <ul>
+        <li>公司設立與變更登記</li>
+        <li>記帳與報稅服務（營所稅、營業稅、綜所稅）</li>
+        <li>薪資計算與勞健保申報</li>
+        <li>財務報表製作與分析</li>
+        <li>稅務諮詢與節稅規劃</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- 最新消息（屬火） -->
+  <section id="news" class="info-box fire" onclick="toggleContent(this)">
+    <h2>最新消息</h2>
+    <div class="info-content">
+      <p>📌 2025年度綜合所得稅申報即將開始，歡迎預約諮詢！<br>
+         📌 本事務所新增「AI智慧記帳模組」服務，提升效率與準確性。</p>
+    </div>
+  </section>
+
+  <!-- 常見問答（屬金） -->
+  <section id="faq" class="info-box metal" onclick="toggleContent(this)">
+    <h2>常見問答</h2>
+    <div class="info-content">
+      <p><strong>Q：我剛成立公司，需要申請什麼稅籍？</strong><br>
+      A：我們會協助您完成營業登記、稅籍申請、並建立完整帳務流程。</p>
+
+      <p><strong>Q：是否提供電子記帳服務？</strong><br>
+      A：是的，我們提供雲端記帳平台，可隨時查閱財務狀況。</p>
+    </div>
+  </section>
+
+  <!-- 網站連結（屬水） -->
+  <section id="links" class="info-box water" onclick="toggleContent(this)">
+    <h2>網站連結</h2>
+    <div class="info-content">
+      <ul>
+        <li><a href="https://www.ntat.gov.tw/" target="_blank">國稅局</a></li>
+        <li><a href="https://www.moea.gov.tw/" target="_blank">經濟部商業司</a></li>
+        <li><a href="https://www.bli.gov.tw/" target="_blank">勞保局</a></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- 聯絡我們 -->
+  <section id="contact">
+    <h2>與我聯絡</h2>
+    <p>📞 電話：02-8994-4966<br>
+       📧 信箱：service@<br>
+       📍 地址：新北市新莊區中華路二段11號九樓<br>
+       🕒 營業時間：週一至週五 09:00–18:00</p>
+  </section>
+
+  <footer>
+    &copy; 2025 日盛國際聯合稅務記帳士事務所 | 保留所有權利
+  </footer>
+
+  <script>
+    function toggleContent(section) {
+      const content = section.querySelector('.info-content');
+      content.style.display = content.style.display === 'block' ? 'none' : 'block';
+    }
+  </script>
+
+</body>
+</html>
