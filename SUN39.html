@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>日盛國際聯合稅務記帳士事務所</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@500;700&family=Montserrat:wght@600&display=swap">
+<style>
+body { margin:0; font-family:'Noto Sans TC','Microsoft JhengHei',sans-serif; background:#f9f7f3; color:#364048; line-height:1.73; }
+.header-gold-frame { background:linear-gradient(80deg,#ffe7ad,#eac771 35%,#fffbe2 100%); border-radius:52px; box-shadow:0 0 0 10px #ffe7ad99,0 0 0 20px #eac77144,0 18px 80px 0 #eac77133,0 0 80px 0 #fff9e288; border:5px solid #eac771; margin:36px auto 0 auto; max-width:820px; padding:0 0 2px 0; position:relative;}
+.header-gold-frame:after { content:""; pointer-events:none; border-radius:52px; position:absolute; inset:0; background:radial-gradient(circle at 80% 7%,#ffe27066 0 13%,transparent 24% 100%),radial-gradient(circle at 8% 77%,#fffbe7bb 0 12%,transparent 35% 100%); opacity:.65; z-index:1; }
+header { background:none; color:#65430c; text-align:center; font-size:1.75rem; letter-spacing:3px; font-weight:bold; border-bottom:0; border-radius:52px; position:relative; z-index:2; padding-top:10px;}
+.eng-title { font-family:'Montserrat','Noto Sans TC',sans-serif; font-size:1.15rem; font-weight:600; letter-spacing:2px; color:#b4883e; margin-top:3px; margin-bottom:9px; display:block; text-align:center; opacity:.93;}
+html { scroll-behavior:smooth; }
+.nav-bar { background:#fff7e4; display:flex;justify-content:center;align-items:center;box-shadow:0 2px 8px rgba(200,160,70,0.07);position:sticky;top:0;z-index:10;flex-wrap:wrap;}
+.nav-bar a { font-weight:700; color:#6d4c19; margin:0 14px; padding:15px 0; text-decoration:none; font-size:1.12rem;}
+.nav-bar a.active,.nav-bar a:hover { color:#ff9100; border-bottom:2.5px solid #ff9100; transform:scale(1.07);}
+.page-section { display:none; opacity:0; transition:opacity 0.3s; }
+.page-section.active { display:block; opacity:1; background:#fffbe7; border-radius:28px; box-shadow:0 8px 32px 0 rgba(207,174,95,0.13); margin-top:36px; }
+.banner-art-border { border-radius:32px; background:rgba(255,247,228,0.85); border:3.7px solid rgba(219,183,99,0.66); box-shadow:0 8px 40px 0 rgba(207,192,129,0.25),0 0 0 6px rgba(233,199,93,0.13); backdrop-filter:blur(3.5px) contrast(1.01); overflow:hidden; padding:0; margin:48px auto 36px auto; max-width:1240px;}
+.banner { background:linear-gradient(120deg,#f4e3c0 70%,#fff6df 100%); display:flex; flex-wrap:wrap; align-items:center; gap:48px; padding:44px 10vw 36px 7vw; min-height:360px; border-radius:32px; }
+.banner-imgbox { flex:1.2 1 340px; max-width:420px; }
+.banner-imgbox img { max-width:100%; border-radius:15px; box-shadow:0 2px 14px 2px rgba(190,160,110,0.13); border:2.7px solid #ebd8b6; display:block; }
+.banner-content { flex:2 1 320px; min-width:240px;}
+.banner-title { font-size:2rem; font-weight:700; color:#6d4c19; margin-bottom:12px; letter-spacing:1.2px; text-shadow:0 4px 16px rgba(233,199,100,0.13);}
+.banner-txt { font-size:1.1rem; margin-bottom:22px; color:#523600; opacity:.92; line-height:2.1;}
+.banner-cta { display:inline-block; padding:12px 34px; background:linear-gradient(90deg,#eac771,#ffb74d 68%); color:#fff; font-weight:bold; font-size:1.13rem; letter-spacing:1.5px; border-radius:7px; border:none; box-shadow:0 2px 9px rgba(224,154,0,0.09); text-decoration:none;}
+.banner-cta:hover { background:#f89d18; color:#ffe0ad; transform:scale(1.04);}
+.table-wrap { background:#fff; border-radius:10px; box-shadow:0 2px 11px #eac77121; padding:10px 12px; margin:18px auto; max-width:97%; }
+table { border-collapse:collapse; width:100%; margin-top:10px; background:#fff; font-size:1em;}
+th,td { padding:7px 11px; border:1px solid #eddfb7;}
+th { background:#ffe5af; color:#905c11; font-weight:bold;}
+tr:nth-child(even) td { background:#f7ebd1;}
+.chart-bar-bg { background:#ffe6bb; height:15px; border-radius:8px; position:relative; margin-top:2px;}
+.chart-bar-val { background:#ebac4b; height:15px; border-radius:8px; text-align:right; color:#fff; padding-right:6px; position:absolute; left:0; top:0;}
+.step-flow { display:flex; justify-content:space-between; background:#f6efd6; border-radius:10px; padding:9px 7px; margin:14px 0 11px 0; }
+.step-item { flex:1; text-align:center;}
+.step-arrow {font-size:1.6rem; color:#dab14a;}
+/* 服務項目 */
+.services-3col-layout { display:flex; gap:30px; justify-content:center; background:rgba(255,230,163,0.13);}
+.services-card { border-radius:17px; box-shadow:0 2px 10px #eac77133; width:340px; flex:1 1 320px; display:flex; flex-direction:column; align-items:center; min-width:280px; }
+.card-whitebox { background:#fff; border-radius:12px; box-shadow:0 2px 11px #cbb66522; margin-top:10px; padding:14px 10px; width:96%; text-align:left;}
+.services-card:nth-child(1) { background:rgba(255,245,226,0.93);}
+.services-card:nth-child(2) { background:rgba(248,249,255,0.92);}
+.services-card:nth-child(3) { background:rgba(255,243,224,0.93);}
+@media (max-width:1100px){
+.services-3col-layout { flex-direction:column;}
+.services-card { width:99%; margin-bottom:19px;}
+}
+.food-flex3col {display:flex;flex-wrap:wrap;gap:32px;justify-content:center;}
+.food-card {background:#fcfaf5;border-radius:17px;box-shadow:0 2px 12px #ebd8af33;padding:26px 14px; width:355px; flex:1 1 320px; display:flex;flex-direction:column; gap:8px;align-items:center;}
+.food-title { color:#479c22; font-size:1.4rem; font-weight:700; margin-bottom:22px;}
+.loan-flex3col {display:flex;flex-wrap:wrap;gap:32px;justify-content:center;}
+.loan-card {background:#fffde4;border-radius:17px;box-shadow:0 2px 12px #ebd8af33;padding:26px 14px;width:355px;flex:1 1 320px;display:flex;flex-direction:column;gap:8px;align-items:center;}
+.loan-title {color:#b47521; font-size:1.4rem; font-weight:700; margin-bottom:22px;}
+.faq-flex3col {display:flex;flex-wrap:wrap;gap:32px;justify-content:center;}
+.faq-card {background:#eef9ff;border-radius:17px;box-shadow:0 2px 12px #bbbaf733;padding:26px 14px;width:355px;flex:1 1 320px;display:flex;flex-direction:column;gap:8px;align-items:center;}
+.faq-title {color:#3453a7; font-size:1.4rem; font-weight:700; margin-bottom:22px;}
+.files-flex3col {display:flex;flex-wrap:wrap;gap:32px;justify-content:center;}
+.files-card {background:#fff6f8;border-radius:17px;box-shadow:0 2px 12px #ab63db33;padding:26px 14px;width:355px;flex:1 1 320px;display:flex;flex-direction:column;gap:8px;align-items:center;}
+.files-title {color:#984c8c; font-size:1.4rem; font-weight:700; margin-bottom:22px;}
+.about-title { color:#b4883e; font-size:1.35rem; font-weight:700; margin-bottom:22px; text-align:center; }
+@media (max-width:1100px){
+.food-flex3col,.loan-flex3col,.faq-flex3col,.files-flex3col {flex-direction:column;}
+.food-card,.loan-card,.faq-card,.files-card {width:98%;margin-bottom:24px;}
+}
+.cta-bar {text-align:center; background:#ffeecf; color:#875c20; font-size:1.12rem; margin:38px 0 0 0; border-radius:16px; padding:14px;}
+footer {text-align:center; margin-top:22px; background:#cebb99; color:#5c4433; font-size:15px; letter-spacing:1px; border-top:3px solid #f5d7af; padding:18px;}
+</style>
+</head>
+<body>
+<div class="header-gold-frame">
+<header>
+日盛國際聯合稅務記帳士事務所
+<span class="eng-title">Sunrise Accounting Office</span>
+</header>
+</div>
+<nav class="nav-bar">
+<a href="#home" class="active">首頁</a>
+<a href="#services">服務項目</a>
+<a href="#food">食品工廠登記</a>
+<a href="#loan">貸款創業補助</a>
+<a href="#faq">常見問題</a>
+<a href="#files">相關文件下載</a>
+<a href="#about">關於我們</a>
+</nav>
+<!-- 首頁內容 -->
+<div class="banner-art-border page-section active" id="home">
+<section class="banner">
+<div class="banner-imgbox">
+<img src="cheng-gong-04.jpg" alt="事務所團隊照">
+</div>
+<div class="banner-content">
+<div class="banner-title">讓專業，成就您的財務未來</div>
+<div class="banner-txt">我們擁有多年會計稅務顧問經驗，服務逾千家企業與創業家，以嚴謹、誠信與高效，協助您「帳務零煩惱」。</div>
+<a href="#contact" class="banner-cta">LINE財稅諮詢</a>
+<div class="table-wrap">
+  <table>
+    <tr><th>業務類型</th><th>客戶數</th><th>平均滿意度</th></tr>
+    <tr><td>會計帳務</td><td>500+</td><td>98%</td></tr>
+    <tr><td>公司設立/變更</td><td>320+</td><td>96%</td></tr>
+    <tr><td>稅務諮詢</td><td>430+</td><td>97%</td></tr>
+  </table>
+</div>
+</div>
+</section>
+</div>
+<!-- 服務項目 -->
+<section class="services-section page-section" id="services">
+  <div class="services-visual-title" style="text-align:center; margin:18px 0 22px 0; font-weight:bold; font-size:1.38rem; color:#b47b22;">服務項目</div>
+  <div class="services-3col-layout">
+    <div class="services-card">
+      <div style="font-size:2.1rem; margin-bottom:5px;">&#128188;</div>
+      <b style="font-size:1.18rem; color:#995e00; margin-bottom:6px;">公司設立/變更</b>
+      <div style="color:#b4863e; margin-bottom:5px; font-size:0.99rem;">協助公司開設登記、變更、依法申請</div>
+      <div class="card-whitebox">
+        <div class="step-flow">
+          <div class="step-item"><b>需求說明</b></div>
+          <div class="step-arrow">&#8594;</div>
+          <div class="step-item"><b>預查協助</b></div>
+          <div class="step-arrow">&#8594;</div>
+          <div class="step-item"><b>文件送件</b></div>
+          <div class="step-arrow">&#8594;</div>
+          <div class="step-item"><b>領件成立</b></div>
+        </div>
+        <table>
+          <tr><th>設立類型</th><th>需要文件</th><th>核准時長</th></tr>
+          <tr><td>有限公司</td><td>身份證/章程/申請表</td><td>5~8天</td></tr>
+          <tr><td>股份有限公司</td><td>同上+股東名冊</td><td>7~12天</td></tr>
+          <tr><td>個人行號</td><td>身份證/申請表</td><td>3~4天</td></tr>
+        </table>
+      </div>
+    </div>
+    <div class="services-card">
+      <div style="font-size:2.1rem; margin-bottom:5px;">&#128196;</div>
+      <b style="font-size:1.18rem; color:#4f4664; margin-bottom:6px;">帳務處理與報稅</b>
+      <div style="color:#b4863e; margin-bottom:5px; font-size:0.99rem;">專業記帳、報表與稅務申報報稅服務</div>
+      <div class="card-whitebox">
+        <div class="step-flow">
+          <div class="step-item"><b>資料收集</b></div>
+          <div class="step-arrow">&#8594;</div>
+          <div class="step-item"><b>分類整理</b></div>
+          <div class="step-arrow">&#8594;</div>
+          <div class="step-item"><b>報表建檔</b></div>
+          <div class="step-arrow">&#8594;</div>
+          <div class="step-item"><b>稅申報</b></div>
+        </div>
+        <table>
+          <tr><th>報表種類</th><th>建檔日期</th><th>送出方式</th></tr>
+          <tr><td>損益表</td><td>每月5日</td><td>電子檔上傳</td></tr>
+          <tr><td>資產負債表</td><td>每季15日</td><td>紙本/電子檔</td></tr>
+          <tr><td>現金流量表</td><td>每年3月</td><td>電子檔</td></tr>
+        </table>
+        <div style="margin-top:10px;">
+          <b>近三年稅申報完成率</b>
+          <div class="chart-bar-bg" style="width:100%;"><div class="chart-bar-val" style="width:95%;">95%</div></div>
+        </div>
+      </div>
+    </div>
+    <div class="services-card">
+      <div style="font-size:2.1rem; margin-bottom:5px;">&#128155;</div>
+      <b style="font-size:1.18rem; color:#b17024; margin-bottom:6px;">稅務諮詢與規劃</b>
+      <div style="color:#b4863e; margin-bottom:5px; font-size:0.99rem;">量身節稅方案規劃與政府輔導申請</div>
+      <div class="card-whitebox">
+        <table>
+          <tr><th>方案類型</th><th>設計說明</th><th>成效分析</th></tr>
+          <tr><td>基本節稅</td><td>營運扣除/合理成本節稅</td><td>省稅率6~15%</td></tr>
+          <tr><td>專案節稅</td><td>稅務賦稅分流/財產移轉</td><td>省稅率12~20%</td></tr>
+          <tr><td>政府補助申請</td><td>專案規劃/資料檢核</td><td>核發率80%以上</td></tr>
+        </table>
+        <div style="margin-top:8px;">
+          <b>顧問服務流程簡圖：</b>
+          <div class="step-flow">
+            <div class="step-item"><b>初診諮詢</b></div>
+            <div class="step-arrow">&#8594;</div>
+            <div class="step-item"><b>資料評估</b></div>
+            <div class="step-arrow">&#8594;</div>
+            <div class="step-item"><b>方案設計</b></div>
+            <div class="step-arrow">&#8594;</div>
+            <div class="step-item"><b>執行申辦</b></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- 食品工廠登記 -->
+<section class="food-section page-section" id="food">
+  <div class="food-title">食品工廠登記</div>
+  <div class="table-wrap">
+    <table>
+      <tr><th>流程步驟</th><th>內容要點</th></tr>
+      <tr><td>資格審核</td><td>免費評估用地、結構與證件</td></tr>
+      <tr><td>文件準備</td><td>收集土地證明/配置圖/消防圖等</td></tr>
+      <tr><td>申請送件</td><td>協助表格填寫及送審</td></tr>
+      <tr><td>現場查驗</td><td>專員陪同消防/環保查廠</td></tr>
+      <tr><td>正式核可</td><td>合格領照與營運提醒</td></tr>
+    </table>
+  </div>
+  <div class="food-flex3col">
+    <div class="food-card">
+      <div style="font-size:2.1rem;">🏭</div>
+      <b>辦理流程一覽</b>
+      <div class="step-flow">
+        <div class="step-item"><b>評估</b></div>
+        <div class="step-arrow">&#8594;</div>
+        <div class="step-item"><b>檢查</b></div>
+        <div class="step-arrow">&#8594;</div>
+        <div class="step-item"><b>文件審查</b></div>
+        <div class="step-arrow">&#8594;</div>
+        <div class="step-item"><b>現場陪同</b></div>
+        <div class="step-arrow">&#8594;</div>
+        <div class="step-item"><b>合格領照</b></div>
+      </div>
+    </div>
+    <div class="food-card">
+      <div style="font-size:2.1rem;">📑</div>
+      <b>申請文件重點</b>
+      <table>
+        <tr><th>文件</th><th>備註說明</th></tr>
+        <tr><td>產業用地證明</td><td>須附分區證明及地籍圖</td></tr>
+        <tr><td>消防評定</td><td>合格消防平面配置圖</td></tr>
+        <tr><td>公司章程</td><td>身分證、營業主體資料</td></tr>
+        <tr><td>工廠配置圖</td><td>格局用途及設備明細</td></tr>
+      </table>
+    </div>
+    <div class="food-card">
+      <div style="font-size:2.1rem;">🧑‍💼</div>
+      <b>顧問陪同優勢</b>
+      <table>
+        <tr><th>結果類比</th><th>產業平均</th><th>本所案件</th></tr>
+        <tr><td>一次核准率</td><td>52%</td><td style="background:#f7cd70;color:#754500;"><b>89%</b></td></tr>
+        <tr><td>平均補件次數</td><td>2.3次</td><td style="background:#99e798;color:#19591b;"><b>0.8次</b></td></tr>
+      </table>
+      <div style="margin-top:14px;">
+        <b>近年申請完成率</b>:<div class="chart-bar-bg" style="width:100%;"><div class="chart-bar-val" style="width:80%;">80%</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- 貸款創業補助 -->
+<section class="loan-section page-section" id="loan">
+  <div class="loan-title">貸款創業補助</div>
+  <div class="table-wrap">
+    <table>
+      <tr><th>項目</th><th>貸款</th><th>政府補助</th></tr>
+      <tr><td>資金取得</td><td>最快7天</td><td>30-60天</td></tr>
+      <tr><td>利率</td><td>1.88~4.5%</td><td>0%</td></tr>
+      <tr><td>額度</td><td>最高500萬</td><td>最高200萬</td></tr>
+      <tr><td>適用族群</td><td>信用良好</td><td>青年、女性、產業</td></tr>
+    </table>
+  </div>
+  <div class="loan-flex3col">
+    <div class="loan-card">
+      <div style="font-size:2.1rem;">💰</div>
+      <b>補助vs.貸款比較</b>
+      <div class="chart-bar-bg" style="width:100%;margin:8px 0 8px 0;">
+        <div class="chart-bar-val" style="width:42%;">成功率42%</div>
+      </div>
+      <div class="step-flow">
+        <div class="step-item"><b>申請</b></div>
+        <div class="step-arrow">&#8594;</div>
+        <div class="step-item"><b>審查</b></div>
+        <div class="step-arrow">&#8594;</div>
+        <div class="step-item"><b>撥款</b></div>
+      </div>
+    </div>
+    <div class="loan-card">
+      <div style="font-size:2.1rem;">📑</div>
+      <b>申請所需文件</b>
+      <table>
+        <tr><th>類型</th><th>明細</th></tr>
+        <tr><td>基本資料</td><td>身分證、戶籍謄本</td></tr>
+        <tr><td>財務資料</td><td>銀行流水、投資預算</td></tr>
+        <tr><td>計劃書</td><td>簡報、補助申請書</td></tr>
+        <tr><td>資格</td><td>青年／女性／產業</td></tr>
+      </table>
+    </div>
+    <div class="loan-card">
+      <div style="font-size:2.1rem;">📝</div>
+      <b>補助常見問題QA</b>
+      <table>
+        <tr><th>提問</th><th>解答</th></tr>
+        <tr><td>信用瑕疵能申請嗎？</td><td>部分補助不限信用</td></tr>
+        <tr><td>核准多久撥款？</td><td>最快30天</td></tr>
+        <tr><td>可貸款/補助並用嗎？</td><td>申請時可同步規劃彈性資金</td></tr>
+      </table>
+    </div>
+  </div>
+</section>
+<!-- 常見問題 -->
+<section class="faq-section page-section" id="faq">
+  <div class="faq-title">常見問題</div>
+  <div class="table-wrap">
+    <table>
+      <tr><th>FAQ主題</th><th>熱門問答</th></tr>
+      <tr><td>公司設立</td><td>多久設立？需哪些文件？資本額要多少？</td></tr>
+      <tr><td>帳務報稅</td><td>費用如何列報？報錯怎辦？電子發票健保申報？</td></tr>
+      <tr><td>補助政策</td><td>申請條件？撥款流程？如何查核補助進度？</td></tr>
+    </table>
+  </div>
+  <div class="faq-flex3col">
+    <div class="faq-card">
+      <div style="font-size:2.1rem;">❓</div>
+      <b>公司設立Q&A</b>
+      <div class="step-flow">
+        <div class="step-item">預查</div>
+        <div class="step-arrow">&#8594;</div>
+        <div class="step-item">申請</div>
+        <div class="step-arrow">&#8594;</div>
+        <div class="step-item">領件</div>
+      </div>
+      <table>
+        <tr><th>問</th><th>答</th></tr>
+        <tr><td>設立時程？</td><td>有限公司最快5~8天</td></tr>
+        <tr><td>文件項目？</td><td>身份證、章程、股東名冊等</td></tr>
+        <tr><td>資本額建議？</td><td>建議10萬起跳，視產業而定</td></tr>
+      </table>
+    </div>
+    <div class="faq-card">
+      <div style="font-size:2.1rem;">🧾</div>
+      <b>帳務/報稅Q&A</b>
+      <table>
+        <tr><th>問</th><th>答</th></tr>
+        <tr><td>哪些費用可報？</td><td>只要有對應單據皆可報</td></tr>
+        <tr><td>報錯怎辦？</td><td>盡快補報並修正</td></tr>
+        <tr><td>電子發票適用？</td><td>營業額2千萬以上必須電子</td></tr>
+      </table>
+    </div>
+    <div class="faq-card">
+      <div style="font-size:2.1rem;">💬</div>
+      <b>其他熱門Q&A</b>
+      <table>
+        <tr><th>問</th><th>答</th></tr>
+        <tr><td>可兼數家公司負責人？</td><td>不限制，惟不可兼任公股法人</td></tr>
+        <tr><td>需要會計師簽證？</td><td>年營收3千萬以上/金融產業必須</td></tr>
+        <tr><td>補助案件查核？</td><td>官網查詢/主動回報</td></tr>
+      </table>
+    </div>
+  </div>
+</section>
+<!-- 相關文件下載 -->
+<section class="files-section page-section" id="files">
+  <div class="files-title">相關文件下載</div>
+  <div class="files-flex3col">
+    <div class="files-card">
+      <div style="font-size:2.1rem;">📄</div>
+      <b>設立/登記檔下載</b>
+      <table>
+        <tr><th>檔案名稱</th><th>用途</th></tr>
+        <tr><td>公司設立申請表</td><td>新設公司基本文件</td></tr>
+        <tr><td>工廠登記完整包</td><td>工廠登記全套證明、消防報告</td></tr>
+      </table>
+    </div>
+    <div class="files-card">
+      <div style="font-size:2.1rem;">📂</div>
+      <b>票據/財稅報表</b>
+      <table>
+        <tr><th>檔案</th><th>用途</th></tr>
+        <tr><td>發票樣張</td><td>報稅、補助核查</td></tr>
+        <tr><td>計畫書簡表</td><td>貸款/補助申請專用</td></tr>
+      </table>
+      <div style="margin-top:8px;">
+        <b>文件下載率(2025 Q2)</b>
+        <div class="chart-bar-bg" style="width:100%;">
+          <div class="chart-bar-val" style="width:67%;">67%</div>
+        </div>
+      </div>
+    </div>
+    <div class="files-card">
+      <div style="font-size:2.1rem;">📝</div>
+      <b>下載指引與說明</b>
+      <table>
+        <tr><th>步驟</th><th>內容</th></tr>
+        <tr><td>1</td><td>點選檔案連結/下載</td></tr>
+        <tr><td>2</td><td>填表，需用藍黑色原子筆</td></tr>
+        <tr><td>3</td><td>如需特殊格式請洽客服</td></tr>
+      </table>
+    </div>
+  </div>
+</section>
+<section class="about-section page-section" id="about">
+  <div class="about-title">關於我們</div>
+  <div style="color:#5b3f19; font-size:1.07rem; margin-bottom:24px;text-align:center;">
+    日盛國際團隊由資深記帳士、稅務顧問組成，超過20年會計稅務專業服務經驗，致力於成為企業、創業家的長期財會夥伴。堅守「專業・效率・誠信」，協助超過千家客戶圓滿達成財務目標與稅務優化。<br>
+    <br>
+    <b>公司發展流程</b>
+    <div class="step-flow" style="margin-top:9px;">
+      <div class="step-item">創業成立</div>
+      <div class="step-arrow">&#8594;</div>
+      <div class="step-item">服務擴展</div>
+      <div class="step-arrow">&#8594;</div>
+      <div class="step-item">口碑累積</div>
+      <div class="step-arrow">&#8594;</div>
+      <div class="step-item">品牌升級</div>
+    </div>
+    <div class="table-wrap">
+      <table>
+        <tr><th>年度</th><th>重大里程碑</th></tr>
+        <tr><td>2010</td><td>公司成立，首創聯合記帳士事務所</td></tr>
+        <tr><td>2015</td><td>擴展至全台多縣市</td></tr>
+        <tr><td>2018</td><td>稅務顧問團隊成立</td></tr>
+        <tr><td>2022</td><td>數位化轉型，雲端服務上線</td></tr>
+      </table>
+    </div>
+  </div>
+  <div style="width:100%;display:flex;justify-content:center;margin-bottom:24px;">
+    <img src="cheng-gong-04.jpg" alt="專業團隊形象照" style="max-width:480px;width:100%;border-radius:18px;box-shadow:0 2px 18px rgba(160,160,140,0.14);">
+  </div>
+</section>
+<div class="cta-bar">
+☎ 客服專線：<b>(02) 8994-4966</b>　｜　LINE官方ID：<b>$$$$$</b>　｜　Email：<b>sunrise89944966@gmail.com</b>
+</div>
+<footer>
+&copy; 2025 日盛國際聯合稅務記帳士事務所 | 版權所有
+</footer>
+<script>
+document.querySelectorAll('.nav-bar a').forEach(link=>{
+  link.addEventListener('click', function(e){
+    e.preventDefault();
+    document.querySelectorAll('.nav-bar a').forEach(a=>a.classList.remove('active'));
+    this.classList.add('active');
+    const targetId = this.getAttribute('href').replace('#','');
+    document.querySelectorAll('.page-section').forEach(sec=>{
+      if (sec.id === targetId) { sec.classList.add('active'); }
+      else { sec.classList.remove('active'); }
+    });
+    window.scrollTo({ top: document.querySelector('.header-gold-frame').offsetHeight, behavior: 'smooth' });
+  });
+});
+</script>
+</body>
+</html>
