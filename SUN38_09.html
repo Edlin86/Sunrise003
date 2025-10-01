@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>日盛國際聯合稅務記帳士事務所</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@500;700&family=Montserrat:wght@600&display=swap">
+<style>
+body { margin:0; font-family:'Noto Sans TC','Microsoft JhengHei',sans-serif; background:#f9f7f3; color:#364048; line-height:1.73; padding-top:108px; }
+@media (max-width:520px){ body {padding-top:64px;} }
+/* header(頁首)獨立外框 */
+.ind-header-frame {
+  position:fixed; left:0; right:0; top:0; width:100vw; height:108px; min-width:320px;
+  z-index:6000; pointer-events:none; background:transparent;
+  display:flex; align-items:center; justify-content:center;
+}
+.ind-header-img {
+  width:100vw; min-width:320px; height:108px; object-fit:contain;
+  display:block; pointer-events:none; background:transparent;
+}
+.ind-header-content {
+  position:fixed; left:0; right:0; top:0; height:108px;
+  z-index:6010; display:flex; flex-direction:column; align-items:center; justify-content:center;
+  pointer-events:auto; background:transparent;
+}
+.ind-header-title {
+  color:#65430c; background:none; font-size:1.7rem; font-weight:bold; margin:0; letter-spacing:3px; text-align:center; padding:16px 0 0 0;
+}
+.ind-header-eng {
+  font-family:'Montserrat','Noto Sans TC',sans-serif; font-size:1.16rem; color:#b4883e; display:block; letter-spacing:2px; margin-top:3px;
+}
+@media (max-width:520px){
+  .ind-header-frame, .ind-header-img, .ind-header-content {height:64px;}
+  .ind-header-img {height:64px;}
+  .ind-header-title {font-size:1.06rem;}
+  .ind-header-eng {font-size:0.85rem;}
+}
+/* 導覽列獨立區塊 */
+.ind-navbar {
+  position:fixed; top:108px; left:0; right:0; height:54px; width:100vw;
+  background:#fff7e4; z-index:5020; box-shadow:0 2px 8px rgba(200,160,70,0.07);
+  display:flex; justify-content:center; align-items:center; flex-wrap:wrap;
+}
+.ind-navbar a {
+  font-weight:700; color:#6d4c19; margin:0 14px; padding:15px 0;
+  text-decoration:none; font-size:1.12rem; border-bottom:0 solid transparent; transition:all .2s;
+}
+.ind-navbar a.ind-nav-active, .ind-navbar a:hover { color:#ff9100; border-bottom:2.5px solid #ff9100; transform:scale(1.07);}
+@media (max-width:520px){
+  .ind-navbar {top:64px;height:38px;}
+  .ind-navbar a {font-size:0.99rem;}
+}
+/* 各頁內容區塊 */
+.ind-section {margin-top:48px; display:none;}
+.ind-home-title {font-size:2rem; font-weight:700; color:#6d4c19; margin-bottom:10px;}
+.ind-home-desc {font-size:1.1rem; color:#523600; opacity:.92;}
+.ind-service-title {font-size:1.4rem; color:#b47b22; margin-bottom:10px; font-weight:bold;}
+.ind-service-list {padding-left:1.3em;}
+.ind-service-list li {margin-bottom:6px;}
+.ind-food-title {font-size:1.4rem; color:#479c22; margin-bottom:12px; font-weight:700;}
+.ind-food-proc {padding-left:1.3em;}
+.ind-food-proc li {margin:3px 0;}
+.ind-loan-title {font-size:1.3rem; color:#b47521; margin-bottom:10px; font-weight:700;}
+.ind-loan-list {padding-left:1.2em;}
+.ind-loan-list li {margin-bottom:6px;}
+.ind-faq-title {font-size:1.3rem; color:#3453a7; margin-bottom:10px; font-weight:700;}
+.ind-faq-list {padding-left:1.2em;}
+.ind-faq-list li {margin-bottom:6px;}
+.ind-files-title {font-size:1.3rem; color:#984c8c; margin-bottom:10px; font-weight:700;}
+.ind-files-list {padding-left:1.2em;}
+.ind-files-list li {margin-bottom:6px;}
+.ind-about-title {font-size:1.3rem; color:#b4883e; margin-bottom:10px; font-weight:700;}
+.ind-about-list {padding-left:1.2em;}
+.ind-about-list li {margin-bottom:6px;}
+</style>
+</head>
+<body>
+<!-- header -->
+<div class="ind-header-frame">
+  <img src="Wei-Ming-Ming-008-005SVG.svg" class="ind-header-img" alt="金色外框" draggable="false">
+  <div class="ind-header-content">
+    <h1 class="ind-header-title">
+      日盛國際聯合稅務記帳士事務所
+      <span class="ind-header-eng">Sunrise Accounting Office</span>
+    </h1>
+  </div>
+</div>
+<!-- nav -->
+<nav class="ind-navbar">
+  <a href="#ind-home" class="ind-nav-active">首頁</a>
+  <a href="#ind-service">服務項目</a>
+  <a href="#ind-food">食品工廠登記</a>
+  <a href="#ind-loan">貸款創業補助</a>
+  <a href="#ind-faq">常見問題</a>
+  <a href="#ind-files">相關文件下載</a>
+  <a href="#ind-about">關於我們</a>
+</nav>
+
+<!-- 各頁內容(全部獨立id) -->
+<section class="ind-section" id="ind-home" style="display:block;">
+  <div class="ind-home-title">讓日盛專業，成爲您的財稅好夥伴</div>
+  <div class="ind-home-desc">我們擁有二十多年會計稅務經驗，服務逾千家企業與創業家，以嚴謹、誠信與高效，協助您「財稅零煩惱」。</div>
+</section>
+<section class="ind-section" id="ind-service">
+  <div class="ind-service-title">服務項目</div>
+  <ul class="ind-service-list">
+    <li>公司/行號設立與變更</li>
+    <li>專業帳務與稅務</li>
+    <li>節稅與風險規劃</li>
+  </ul>
+</section>
+<section class="ind-section" id="ind-food">
+  <div class="ind-food-title">食品工廠登記</div>
+  <ol class="ind-food-proc">
+    <li>廠房統包規劃</li>
+    <li>文件準備</li>
+    <li>申請送件</li>
+    <li>主管機關現場會勘</li>
+    <li>通過廠登</li>
+  </ol>
+</section>
+<section class="ind-section" id="ind-loan">
+  <div class="ind-loan-title">貸款創業補助</div>
+  <ul class="ind-loan-list">
+    <li>補助與貸款比較</li>
+    <li>申請文件列表</li>
+    <li>常見貸款/補助問題</li>
+  </ul>
+</section>
+<section class="ind-section" id="ind-faq">
+  <div class="ind-faq-title">常見問題</div>
+  <ul class="ind-faq-list">
+    <li>公司設立Q&A</li>
+    <li>帳務/報稅Q&A</li>
+    <li>其他熱門Q&A</li>
+  </ul>
+</section>
+<section class="ind-section" id="ind-files">
+  <div class="ind-files-title">相關文件下載</div>
+  <ul class="ind-files-list">
+    <li>設立/登記檔</li>
+    <li>財稅報表</li>
+    <li>下載說明</li>
+  </ul>
+</section>
+<section class="ind-section" id="ind-about">
+  <div class="ind-about-title">關於我們</div>
+  <ul class="ind-about-list">
+    <li>日盛國際由資深記帳士、稅務顧問組成</li>
+    <li>超過20年服務經驗，協助超過千家客戶</li>
+    <li>堅守專業、效率、誠信三大原則</li>
+  </ul>
+</section>
+<script>
+document.querySelectorAll('.ind-navbar a').forEach(link=>{
+link.addEventListener('click',function(e){
+  e.preventDefault();
+  document.querySelectorAll('.ind-navbar a').forEach(a=>a.classList.remove('ind-nav-active'));
+  this.classList.add('ind-nav-active');
+  document.querySelectorAll('.ind-section').forEach(sec=>sec.style.display="none");
+  const tid = this.getAttribute('href').replace('#','');
+  const tsec = document.getElementById(tid);
+  if(tsec) tsec.style.display="block";
+});
+});
+</script>
+</body>
+</html>
