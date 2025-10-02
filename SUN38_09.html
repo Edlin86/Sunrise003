@@ -6,10 +6,41 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@500;700&family=Montserrat:wght@600&display=swap">
   <style>
-    body { margin:0; font-family:'Noto Sans TC','Microsoft JhengHei',sans-serif; background:#f9f7f3; color:#364048; line-height:1.73; padding-top:180px;}
-    .header-image-bar { width:100vw; max-width:100%; margin:0; padding:0; position:fixed; top:0; left:0; right:0; z-index:1000; background:transparent; height:108px; display:flex; align-items:center; justify-content:center;}
-    .header-image-bar img { display:block; max-height:108px; width:100vw; object-fit:cover; margin:0 auto; border-radius:0; box-shadow:none; background:transparent;}
-    .nav-bar {background:#fff7e4;display:flex;justify-content:center;align-items:center;box-shadow:0 2px 8px rgba(200,160,70,0.07);position:fixed;left:0;right:0;z-index:1001;flex-wrap:wrap;top:108px;width:100vw;height:54px;}
+    body { margin:0; font-family:'Noto Sans TC','Microsoft JhengHei',sans-serif; background:#f9f7f3; color:#364048; line-height:1.73; padding-top:170px;}
+    /* 固定頂端縮圖完整呈現 */
+    .header-image-bar { 
+      width:100vw; 
+      max-width:100vw; 
+      margin:0 auto; 
+      padding:0; 
+      position:fixed; 
+      top:0; left:0; right:0;
+      z-index:1000;
+      background:transparent;
+      height:120px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      box-sizing:border-box;
+      overflow:hidden;
+    }
+    .header-image-bar img {
+      display:block;
+      max-width:100vw;
+      max-height:112px;
+      width:auto;
+      height:auto;
+      margin:0 auto;
+      object-fit:contain;   /* ensure entire image is visible, never cropped */
+      object-position:center;
+      border-radius:0;
+      box-shadow:none;
+      background:transparent;
+      /* for transparent周圍設白底避免背景穿透 */
+      background-color: #fffbe7;
+    }
+    /* nav-bar & 內容、分頁原有設計保留 */
+    .nav-bar {background:#fff7e4;display:flex;justify-content:center;align-items:center;box-shadow:0 2px 8px rgba(200,160,70,0.07);position:fixed;left:0;right:0;z-index:1001;flex-wrap:wrap;top:120px;width:100vw;height:54px;}
     .nav-bar a { font-weight:700; color:#6d4c19; margin:0 14px; padding:15px 0; text-decoration:none; font-size:1.12rem; }
     .nav-bar a.active,.nav-bar a:hover { color:#ff9100; border-bottom:2.5px solid #ff9100; transform:scale(1.07);}
     .page-section { display:none; opacity:0; transition:opacity 0.3s; }
@@ -65,6 +96,7 @@
   </style>
 </head>
 <body>
+<!-- 頁首縮圖（不裁切） -->
 <div class="header-image-bar">
   <img src="sr-004JPG.jpg" alt="公司標題圖">
 </div>
@@ -77,6 +109,7 @@
 <a href="#files">相關文件下載</a>
 <a href="#about">關於我們</a>
 </nav>
+
 <!-- 首頁Banner -->
 <div class="banner-art-border page-section active" id="home">
   <section class="banner">
@@ -90,7 +123,8 @@
     </div>
   </section>
 </div>
-<!-- 2. 服務項目三欄卡片 -->
+
+<!-- (以下分頁內容原樣，略) -->
 <section class="services-section page-section" id="services">
   <div class="services-3col-layout">
     <div class="services-card">
@@ -129,7 +163,6 @@
     </div>
   </div>
 </section>
-<!-- 3. 食品工廠登記 -->
 <section class="food-section page-section" id="food">
   <div class="food-title">食品工廠登記</div>
   <div class="food-flex3col">
@@ -158,7 +191,6 @@
     <div class="food-card"><div style="font-size:2.1rem;">🧑‍💼</div><b>顧問陪同優勢</b><ul><li>建廠輔導</li><li>文件申請</li><li>現場會勘</li></ul></div>
   </div>
 </section>
-<!-- 4. 貸款/補助 -->
 <section class="loan-section page-section" id="loan">
   <div class="loan-title">貸款創業補助</div>
   <div class="loan-flex3col">
@@ -167,7 +199,6 @@
     <div class="loan-card"><div style="font-size:2.1rem;">📝</div><b>補助QA</b><ul><li>信用瑕疵說明</li><li>撥款天數</li><li>資金設計</li></ul></div>
   </div>
 </section>
-<!-- 5. FAQ 多卡片 -->
 <section class="faq-section page-section" id="faq">
   <div class="faq-title">常見問題</div>
   <div class="faq-flex3col">
@@ -176,7 +207,6 @@
     <div class="faq-card"><div style="font-size:2.1rem;">💬</div><b>其他Q&A</b><ul><li>負責人資格</li><li>簽證必要性</li></ul></div>
   </div>
 </section>
-<!-- 6. 文件下載 -->
 <section class="files-section page-section" id="files">
   <div class="files-title">相關文件下載</div>
   <div class="files-flex3col">
@@ -185,7 +215,6 @@
     <div class="files-card"><div style="font-size:2.1rem;">📝</div><b>下載說明</b><ul><li>表單註解</li></ul></div>
   </div>
 </section>
-<!-- 7. 關於我們二欄 -->
 <section class="about-section page-section" id="about">
   <div class="about-title">關於我們</div>
   <div class="about-flexbox">
