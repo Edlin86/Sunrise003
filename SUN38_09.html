@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@500;700&family=Montserrat:wght@600&display=swap">
   <style>
-    body { margin:0; font-family:'Noto Sans TC','Microsoft JhengHei',sans-serif; background:#f9f7f3; color:#364048; line-height:1.73; padding-top:254px;} /* header+nav合計高度 */
+    body { margin:0; font-family:'Noto Sans TC','Microsoft JhengHei',sans-serif; background:#f9f7f3; color:#364048; line-height:1.73; padding-top:274px;}
     .header-image-bar { 
       width:100vw; 
       max-width:100vw; 
@@ -16,27 +16,30 @@
       top:0; left:0; right:0;
       z-index:1000;
       background:transparent;
-      height:200px;
+      height:220px;
       display:flex;
       align-items:center;
       justify-content:center;
       box-sizing:border-box;
-      overflow:auto;
+      overflow:hidden;
     }
     .header-image-bar img {
       display:block;
-      max-width:100vw;
-      max-height:196px;
-      width:auto;
-      height:196px;
+      width:100%;
+      max-width:1600px;   /* increase horizontal pixel support */
+      height:210px;
+      max-height:210px;
       margin:0 auto;
       object-fit:contain;
       object-position:center;
       border-radius:0;
       box-shadow:none;
       background-color: #fffbe7;
+      image-rendering: auto; /* preserve clarity on upscaling */
+      image-rendering: crisp-edges;
+      image-rendering: high-quality;
     }
-    .nav-bar {background:#fff7e4;display:flex;justify-content:center;align-items:center;box-shadow:0 2px 8px rgba(200,160,70,0.07);position:fixed;left:0;right:0;z-index:1001;flex-wrap:wrap;top:200px;width:100vw;height:54px;}
+    .nav-bar {background:#fff7e4;display:flex;justify-content:center;align-items:center;box-shadow:0 2px 8px rgba(200,160,70,0.07);position:fixed;left:0;right:0;z-index:1001;flex-wrap:wrap;top:220px;width:100vw;height:54px;}
     .nav-bar a { font-weight:700; color:#6d4c19; margin:0 14px; padding:15px 0; text-decoration:none; font-size:1.12rem; }
     .nav-bar a.active,.nav-bar a:hover { color:#ff9100; border-bottom:2.5px solid #ff9100; transform:scale(1.07);}
     .page-section { display:none; opacity:0; transition:opacity 0.3s; }
@@ -87,15 +90,15 @@
       .about-imgbox {justify-content:center;}
       .about-imgbox img {max-width:92vw;}
       .about-textbox {max-width:98vw;}
-      .header-image-bar { height:112px; }
-      .header-image-bar img { max-height:102px; height:102px;}
-      .nav-bar { top:112px; }
-      body { padding-top:164px; }
+      .header-image-bar { height:122px; }
+      .header-image-bar img { max-height:110px;height:110px;}
+      .nav-bar { top:122px; }
+      body { padding-top:176px; }
     }
   </style>
 </head>
 <body>
-<!-- 頁首縮圖（不裁切） -->
+<!-- 頁首縮圖（不裁切、高清比例） -->
 <div class="header-image-bar">
   <img src="sr-005JPG.jpg" alt="公司標題圖">
 </div>
@@ -108,10 +111,7 @@
 <a href="#files">相關文件下載</a>
 <a href="#about">關於我們</a>
 </nav>
-
-<!-- （以下分頁內容皆與你之前版型、排版一致，略） -->
-<!-- 略內容，和上輪範例完全相同，皆可直接複製貼上 -->
-
+<!-- 首頁Banner -->
 <div class="banner-art-border page-section active" id="home">
   <section class="banner">
     <div class="banner-imgbox">
@@ -124,15 +124,113 @@
     </div>
   </section>
 </div>
-<!-- 其它各分頁 ... 請延用上一版本全部內容 ... -->
-
-<section class="services-section page-section" id="services"> ... </section>
-<section class="food-section page-section" id="food"> ... </section>
-<section class="loan-section page-section" id="loan"> ... </section>
-<section class="faq-section page-section" id="faq"> ... </section>
-<section class="files-section page-section" id="files"> ... </section>
-<section class="about-section page-section" id="about"> ... </section>
-
+<!-- 五大分頁三欄卡片完整恢復： -->
+<section class="services-section page-section" id="services">
+  <div class="services-3col-layout">
+    <div class="services-card">
+      <div style="font-size:2.1rem; margin-bottom:5px;">💼</div>
+      <b style="font-size:1.18rem; color:#995e00; margin-bottom:6px;">公司、行號設立/變更</b>
+      <div class="card-whitebox">
+        <ul>
+          <li>新創公司流程規劃</li>
+          <li>名稱預查與登記申請</li>
+          <li>稅務規劃輔導</li>
+          <li>負責人異動、地址遷移、資本額調整</li>
+        </ul>
+      </div>
+    </div>
+    <div class="services-card">
+      <div style="font-size:2.1rem; margin-bottom:5px;">📄</div>
+      <b style="font-size:1.18rem; color:#4f4664; margin-bottom:6px;">帳務處理與報稅</b>
+      <div class="card-whitebox">
+        <ul>
+          <li>資產負債表、現金流量表製作</li>
+          <li>稅務申報服務</li>
+          <li>報稅補正流程</li>
+        </ul>
+      </div>
+    </div>
+    <div class="services-card">
+      <div style="font-size:2.1rem; margin-bottom:5px;">💛</div>
+      <b style="font-size:1.18rem; color:#b17024; margin-bottom:6px;">稅務諮詢與規劃</b>
+      <div class="card-whitebox">
+        <ul>
+          <li>高效稅務諮詢、節稅佈局</li>
+          <li>政府補助申請</li>
+          <li>稅務風險管控</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="food-section page-section" id="food">
+  <div class="food-title">食品工廠登記</div>
+  <div class="food-flex3col">
+    <div class="food-card"><div style="font-size:2.1rem;">🏭</div><b>辦理流程一覽</b><ul><li>廠房統包規劃</li><li>文件準備</li><li>申請送件</li><li>現場會勘</li><li>通過廠登</li></ul></div>
+    <div class="food-card"><div style="font-size:2.1rem;">📑</div><b>申請文件重點</b>
+      <ul>
+        <li>廠房地籍資料</li>
+        <li>環保法令</li>
+        <li>廠房平面配置圖</li>
+      </ul>
+      <div class="food-procedure-list">
+        <div class="food-procedure-list-title">食品業九大程序書與表單撰寫</div>
+        <ul class="food-procedure-list-ul">
+          <li class="food-procedure-list-li">衛生管理作業程序書</li>
+          <li class="food-procedure-list-li">製程及品質管制作業程序書</li>
+          <li class="food-procedure-list-li">倉儲管制作業程序書</li>
+          <li class="food-procedure-list-li">運輸管制作業程序書</li>
+          <li class="food-procedure-list-li">檢驗與量測管制作業程序書</li>
+          <li class="food-procedure-list-li">客訴管制作業程序書</li>
+          <li class="food-procedure-list-li">成品回收管制作業程序書</li>
+          <li class="food-procedure-list-li">文件管制作業程序書</li>
+          <li class="food-procedure-list-li">教育訓練作業程序書</li>
+        </ul>
+      </div>
+    </div>
+    <div class="food-card"><div style="font-size:2.1rem;">🧑‍💼</div><b>顧問陪同優勢</b><ul><li>建廠輔導</li><li>文件申請</li><li>現場會勘</li></ul></div>
+  </div>
+</section>
+<section class="loan-section page-section" id="loan">
+  <div class="loan-title">貸款創業補助</div>
+  <div class="loan-flex3col">
+    <div class="loan-card"><div style="font-size:2.1rem;">💰</div><b>補助vs貸款比較</b><ul><li>資金取得</li><li>利率條件</li><li>額度上限</li></ul></div>
+    <div class="loan-card"><div style="font-size:2.1rem;">📑</div><b>申請文件</b><ul><li>基本資料</li><li>財務資料</li><li>營運計劃</li></ul></div>
+    <div class="loan-card"><div style="font-size:2.1rem;">📝</div><b>補助QA</b><ul><li>信用瑕疵說明</li><li>撥款天數</li><li>資金設計</li></ul></div>
+  </div>
+</section>
+<section class="faq-section page-section" id="faq">
+  <div class="faq-title">常見問題</div>
+  <div class="faq-flex3col">
+    <div class="faq-card"><div style="font-size:2.1rem;">❓</div><b>公司設立Q&A</b><ul><li>設立時程</li><li>資本額</li></ul></div>
+    <div class="faq-card"><div style="font-size:2.1rem;">🧾</div><b>帳務/報稅Q&A</b><ul><li>列報規則</li><li>補正流程</li></ul></div>
+    <div class="faq-card"><div style="font-size:2.1rem;">💬</div><b>其他Q&A</b><ul><li>負責人資格</li><li>簽證必要性</li></ul></div>
+  </div>
+</section>
+<section class="files-section page-section" id="files">
+  <div class="files-title">相關文件下載</div>
+  <div class="files-flex3col">
+    <div class="files-card"><div style="font-size:2.1rem;">📄</div><b>設立/登記檔下載</b><ul><li>公司設立申請表</li><li>登記資料包</li></ul></div>
+    <div class="files-card"><div style="font-size:2.1rem;">📂</div><b>財稅報表</b><ul><li>財報範例</li></ul></div>
+    <div class="files-card"><div style="font-size:2.1rem;">📝</div><b>下載說明</b><ul><li>表單註解</li></ul></div>
+  </div>
+</section>
+<section class="about-section page-section" id="about">
+  <div class="about-title">關於我們</div>
+  <div class="about-flexbox">
+    <div class="about-imgbox">
+      <img src="generated-image-004.jpg" alt="專業團隊形象照">
+    </div>
+    <div class="about-textbox">
+      <ul class="about-desc-ul">
+        <li class="about-desc-li">日盛國際團隊由資深記帳士、稅務顧問組成，</li>
+        <li class="about-desc-li">超過20年會計稅務專業服務經驗，</li>
+        <li class="about-desc-li">致力於成為企業、創業家的長期財會夥伴。</li>
+        <li class="about-desc-li">堅守「專業・效率・誠信」，協助超過千家客戶圓滿達成財務目標與稅務優化。</li>
+      </ul>
+    </div>
+  </div>
+</section>
 <div class="cta-bar">
 ☎ 客服專線：<b>(02) 8994-4966</b>　｜　LINE官方ID：<b>$$$$$</b>　｜　Email：<b>sunrise89944966@gmail.com</b>
 </div>
@@ -155,4 +253,3 @@ document.querySelectorAll('.nav-bar a').forEach(link=>{
 </script>
 </body>
 </html>
-
