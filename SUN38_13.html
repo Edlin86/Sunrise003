@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <title>日盛國際聯合稅務記帳士事務所</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@500;700&family=Montserrat:wght@600&display=swap">
+  <style>
+    body { margin:0; font-family:'Noto Sans TC','Microsoft JhengHei',sans-serif; background:#f9f7f3; color:#364048; line-height:1.73; padding-top:160px;}
+    .header-image-bar { width:100vw; max-width:100vw; position:fixed; top:0; left:0; right:0; z-index:1000; height:112px; display:flex; align-items:center; justify-content:center; background:transparent;}
+    .header-image-bar img { display:block; max-width:900px; width:100%; height:auto; max-height:108px; object-fit:contain;}
+    .nav-bar {background:#fff7e4;display:flex;justify-content:center;align-items:center;box-shadow:0 2px 8px rgba(200,160,70,0.07);position:fixed;left:0;right:0;z-index:1001;top:112px;width:100vw;height:54px;}
+    .nav-bar a { font-weight:700; color:#6d4c19; margin:0 14px; padding:15px 0; text-decoration:none; font-size:1.12rem;}
+    .nav-bar a.active,.nav-bar a:hover { color:#ff9100; border-bottom:2.5px solid #ff9100; transform:scale(1.07);}
+    .page-section { display:none; opacity:0; transition:opacity 0.3s;}
+    .page-section.active { display:block; opacity:1; background:#fffbe7; border-radius:28px; box-shadow:0 8px 32px 0 rgba(207,174,95,0.13); margin-top:36px;}
+    /* 三欄卡片結構通用 */
+    .three-col-layout { display:flex; gap:32px; justify-content:center; flex-wrap:wrap; background:rgba(255,230,163,0.12);}
+    .page-card { background:#fff; border-radius:17px; box-shadow:0 2px 10px #eac77133; width:340px; flex:1 1 320px; display:flex; flex-direction:column; align-items:center; min-width:280px; margin-bottom:18px;}
+    .page-card-inner { border-radius:12px; box-shadow:0 2px 11px #cbb66522; margin-top:10px; padding:14px 10px; width:96%; text-align:left;}
+    .page-section-title {font-weight:bold; color:#b47b22; font-size:1.35rem; margin-bottom:27px; text-align:center;}
+    .card-main-title {color:#65430c;font-size:1.18rem;margin-bottom:7px;}
+    .card-desc {color:#90680e;font-size:1rem;margin-bottom:10px;}
+    ul, ol { margin:0 0 6px 0; padding-left:1.2em; }
+    li { margin-bottom:5px; }
+    /* FAQ獨立區塊 */
+    .faq-list-box {background:#fff; border-radius:12px; box-shadow:0 2px 18px #cbc6b833; margin:12px auto; padding:24px; max-width:740px;}
+    .faq-list-title {font-size:1.25rem;color:#3453a7;font-weight:bold;margin-bottom:16px; margin-top:14px;}
+    .faq-topic-group {margin-bottom:32px;}
+    .faq-question-list {list-style:none; padding-left:0;}
+    .faq-question-list li {margin:10px 0; padding:14px 18px; background:#f7f4e8; border-radius:7px; font-size:1.08rem; color:#664d19; cursor:pointer;}
+    .faq-question-list li:hover {background:#ffeec3;color:#d37b00;}
+    .faq-ans-box {background:#fff; border-radius:18px; box-shadow:0 2px 20px #cdb98326; margin:33px auto 20px auto; padding:38px 30px; max-width:680px; display:none;}
+    .faq-ans-title {font-weight:700; font-size:1.22rem; color:#b27a10; margin-bottom:13px;}
+    .faq-ans-text {font-size:1.09rem; color:#515454; line-height:2;}
+    .faq-back-btn {display:inline-block; margin-top:25px; padding:9px 28px; font-size:1rem; background:#ffeec3; color:#925c13; border-radius:7px; border:none; cursor:pointer;}
+    .faq-back-btn:hover {background:#ffd36b; color:#66481b;}
+    .cta-bar {text-align:center;background:#ffeecf;color:#875c20;font-size:1.12rem;margin:38px 0 0 0;border-radius:16px;padding:14px;}
+    footer {text-align:center;margin-top:22px;background:#cebb99;color:#5c4433;font-size:15px;letter-spacing:1px;border-top:3px solid #f5d7af;padding:18px;}
+  </style>
+</head>
+<body>
+<div class="header-image-bar">
+  <img src="Wei-Ming-Ming-008-005SVG.svg" alt="公司標題圖">
+</div>
+<nav class="nav-bar">
+  <a href="#home" class="active">首頁</a>
+  <a href="#services">服務項目</a>
+  <a href="#food">食品工廠登記</a>
+  <a href="#loan">貸款創業補助</a>
+  <a href="#faq">常見問題</a>
+  <a href="#files">相關文件下載</a>
+  <a href="#about">關於我們</a>
+</nav>
+
+<!-- 首頁 -->
+<div class="page-section active" id="home">
+  <div class="page-section-title">讓日盛專業，成為您的財稅好夥伴</div>
+  <div class="three-col-layout">
+    <div class="page-card">
+      <div class="card-main-title">20年會計稅務經驗</div>
+      <div class="card-desc">服務逾千家企業與創業家</div>
+      <div class="page-card-inner">
+        <ul>
+          <li>專業財會規劃</li>
+          <li>節稅策略建議</li>
+          <li>客製化帳務服務</li>
+        </ul>
+      </div>
+    </div>
+    <div class="page-card">
+      <div class="card-main-title">嚴謹誠信高效</div>
+      <div class="card-desc">財稅零煩惱，創業好夥伴</div>
+      <div class="page-card-inner">
+        <ul>
+          <li>快速設立、變更公司</li>
+          <li>即時會計/稅務諮詢</li>
+          <li>法律合規輔導</li>
+        </ul>
+      </div>
+    </div>
+    <div class="page-card">
+      <div class="card-main-title">客戶見證</div>
+      <div class="card-desc">重視每位創業者的成果</div>
+      <div class="page-card-inner">
+        <ul>
+          <li>跨產業合作案例</li>
+          <li>穩步成長策略</li>
+          <li>政策/補助成功經驗</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 服務項目 -->
+<div class="page-section" id="services">
+  <div class="page-section-title">服務項目</div>
+  <div class="three-col-layout">
+    <div class="page-card">
+      <div style="font-size:2.1rem;margin-bottom:5px;">💼</div>
+      <div class="card-main-title">公司/行號設立與變更</div>
+      <div class="card-desc">新設/變更全程輔導</div>
+      <div class="page-card-inner">
+        <ul>
+          <li>新創公司流程規劃</li>
+          <li>名稱預查與登記申請</li>
+          <li>稅務規劃輔導</li>
+          <li>負責人異動、地址遷移、資本額調整</li>
+        </ul>
+      </div>
+    </div>
+    <div class="page-card">
+      <div style="font-size:2.1rem;margin-bottom:5px;">📄</div>
+      <div class="card-main-title">帳務處理與報稅</div>
+      <div class="card-desc">現金流財報、稅務申報</div>
+      <div class="page-card-inner">
+        <ul>
+          <li>資產負債表、現金流量表製作</li>
+          <li>稅務申報服務</li>
+          <li>報稅補正流程</li>
+        </ul>
+      </div>
+    </div>
+    <div class="page-card">
+      <div style="font-size:2.1rem;margin-bottom:5px;">💛</div>
+      <div class="card-main-title">稅務諮詢與規劃</div>
+      <div class="card-desc">專人節稅、補助輔導</div>
+      <div class="page-card-inner">
+        <ul>
+          <li>高效稅務諮詢、節稅佈局</li>
+          <li>政府補助申請</li>
+          <li>稅務風險管控</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 食品工廠登記 -->
+<div class="page-section" id="food">
+  <div class="page-section-title">食品工廠登記</div>
+  <div class="three-col-layout">
+    <div class="page-card">
+      <div style="font-size:2.1rem;">🏭</div>
+      <div class="card-main-title">辦理流程一覽</div>
+      <div class="page-card-inner">
+        <ul>
+          <li>廠房統包規劃</li>
+          <li>文件準備</li>
+          <li>申請送件</li>
+          <li>主管機關現場會勘</li>
+          <li>通過廠登</li>
+        </ul>
+      </div>
+    </div>
+    <div class="page-card">
+      <div style="font-size:2.1rem;">📑</div>
+      <div class="card-main-title">申請文件重點</div>
+      <div class="page-card-inner">
+        <ul>
+          <li>廠房地籍資料</li>
+          <li>環保法令判釋</li>
+          <li>廠房平面配置圖</li>
+          <li>食品廠各項細部作業審查</li>
+        </ul>
+        <div class="card-desc">食品業九大程序書</div>
+        <ul>
+          <li>衛生管理作業程序書</li>
+          <li>製程及品質管制作業程序書</li>
+          <li>倉儲管制作業程序書</li>
+          <li>運輸管制作業程序書</li>
+          <li>檢驗與量測管制作業程序書</li>
+          <li>客訴管制作業程序書</li>
+          <li>成品回收管制作業程序書</li>
+          <li>文件管制作業程序書</li>
+          <li>教育訓練作業程序書</li>
+        </ul>
+      </div>
+    </div>
+    <div class="page-card">
+      <div style="font-size:2.1rem;">🧑‍💼</div>
+      <div class="card-main-title">顧問陪同優勢</div>
+      <div class="page-card-inner">
+        <ul>
+          <li>建廠規劃輔導</li>
+          <li>文件整理與申請</li>
+          <li>現場陪同會勘</li>
+          <li>完成廠登</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 貸款創業補助 -->
+<div class="page-section" id="loan">
+  <div class="page-section-title">貸款創業補助</div>
+  <div class="three-col-layout">
+    <div class="page-card">
+      <div style="font-size:2.1rem;">💰</div>
+      <div class="card-main-title">補助vs貸款比較</div>
+      <div class="page-card-inner">
+        <ul>
+          <li>資金取得</li>
+          <li>利率條件</li>
+          <li>核准條件</li>
+          <li>額度上限</li>
+        </ul>
+      </div>
+    </div>
+    <div class="page-card">
+      <div style="font-size:2.1rem;">📑</div>
+      <div class="card-main-title">申請所需文件</div>
+      <div class="page-card-inner">
+        <ul>
+          <li>基本資料</li>
+          <li>財務資料</li>
+          <li>營運計劃</li>
+          <li>創業資格</li>
+        </ul>
+      </div>
+    </div>
+    <div class="page-card">
+      <div style="font-size:2.1rem;">📝</div>
+      <div class="card-main-title">補助常見問題QA</div>
+      <div class="page-card-inner">
+        <ul>
+          <li>信用瑕疵說明</li>
+          <li>撥款天數</li>
+          <li>彈性資金設計</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- FAQ（分主題，問答可切換） -->
+<div class="page-section" id="faq">
+  <div class="faq-title">常見問題</div>
+  <div class="faq-list-box" id="faq-main-list">
+    <div class="faq-list-title">公司設立</div>
+    <ul class="faq-question-list faq-topic-group">
+      <li data-faq="1">公司設立需要準備哪些文件？</li>
+      <li data-faq="2">公司設立流程需要多久？</li>
+      <li data-faq="3">初創公司資本額建議多少？</li>
+      <li data-faq="4">老闆一定要有會計背景嗎？</li>
+    </ul>
+    <div class="faq-list-title">帳務報稅</div>
+    <ul class="faq-question-list faq-topic-group">
+      <li data-faq="5">營業稅和所得稅有何不同？</li>
+      <li data-faq="6">營運初期有哪些稅務申報義務？</li>
+      <li data-faq="7">如何降低公司帳務/稅務的出錯率？</li>
+      <li data-faq="8">虧損或暫停營業還需要報稅嗎？</li>
+    </ul>
+    <div class="faq-list-title">其他</div>
+    <ul class="faq-question-list faq-topic-group">
+      <li data-faq="9">租用辦公室與在家辦公的帳務差異？</li>
+      <li data-faq="10">要如何合法節稅？</li>
+    </ul>
+  </div>
+  <div class="faq-ans-box" id="faq-ans-1"><div class="faq-ans-title">公司設立需要準備哪些文件？</div><div class="faq-ans-text">公司設立通常需要：負責人及股東身分證明文件、印章、資本額證明、辦公地點租約／房屋權狀、設立章程、委託書及申請書。部分行業需額外主管機關核准文件。</div><button class="faq-back-btn" onclick="showFaqList()">返回問題列表</button></div>
+  <div class="faq-ans-box" id="faq-ans-2"><div class="faq-ans-title">公司設立流程需要多久？</div><div class="faq-ans-text">命名預查約2-3天，設立登記文件準備1-3天，送件後審查5-7天，部分行業需額外審查時間，一般約1-2週完成。</div><button class="faq-back-btn" onclick="showFaqList()">返回問題列表</button></div>
+  <div class="faq-ans-box" id="faq-ans-3"><div class="faq-ans-title">初創公司資本額建議多少？</div><div class="faq-ans-text">資本額無硬性規定，但應符合營運需求與資金週轉，常見10萬~50萬元；若需爭取補助或大型合約，可依實際用途準備更多。</div><button class="faq-back-btn" onclick="showFaqList()">返回問題列表</button></div>
+  <div class="faq-ans-box" id="faq-ans-4"><div class="faq-ans-title">老闆一定要有會計背景嗎？</div><div class="faq-ans-text">不需要，建議創業者具備基本財務知識或委託專業記帳士協助，自己專注於核心業務與管理，讓財報和稅務由專業負責。</div><button class="faq-back-btn" onclick="showFaqList()">返回問題列表</button></div>
+  <div class="faq-ans-box" id="faq-ans-5"><div class="faq-ans-title">營業稅和所得稅有何不同？</div><div class="faq-ans-text">營業稅是對銷貨及勞務收取（如統一發票稅），所得稅是企業全年盈餘課徵，兩者申報方式及時點不同。</div><button class="faq-back-btn" onclick="showFaqList()">返回問題列表</button></div>
+  <div class="faq-ans-box" id="faq-ans-6"><div class="faq-ans-title">營運初期有哪些稅務申報義務？</div><div class="faq-ans-text">包含營業稅雙月報、年度所得稅申報、扣繳業務、二代健保…記得查明公司產業是否有特殊規定。</div><button class="faq-back-btn" onclick="showFaqList()">返回問題列表</button></div>
+  <div class="faq-ans-box" id="faq-ans-7"><div class="faq-ans-title">如何降低公司帳務/稅務的出錯率？</div><div class="faq-ans-text">建議建立SOP、定期盤點、使用數位會計系統，並委託專業記帳士或會計師審核帳務。</div><button class="faq-back-btn" onclick="showFaqList()">返回問題列表</button></div>
+  <div class="faq-ans-box" id="faq-ans-8"><div class="faq-ans-title">虧損或暫停營業還需要報稅嗎？</div><div class="faq-ans-text">是的，不論盈虧或暫停，必須依法申報營業稅、所得稅，否則可能被罰或註銷登記。</div><button class="faq-back-btn" onclick="showFaqList()">返回問題列表</button></div>
+  <div class="faq-ans-box" id="faq-ans-9"><div class="faq-ans-title">租用辦公室與在家辦公的帳務差異？</div><div class="faq-ans-text">辦公室登記可合法申報租金、設立成本、折舊；在家辦公受限住宅規範，記得查稅務容許度與發票申報。</div><button class="faq-back-btn" onclick="showFaqList()">返回問題列表</button></div>
+  <div class="faq-ans-box" id="faq-ans-10"><div class="faq-ans-title">要如何合法節稅？</div><div class="faq-ans-text">善用各項營業支出、合規列帳、申報折舊並搭配專業會計/顧問規劃，誠信申報，不要有僥倖心態。</div><button class="faq-back-btn" onclick="showFaqList()">返回問題列表</button></div>
+</div>
+
+<!-- 相關文件下載 -->
+<div class="page-section" id="files">
+  <div class="page-section-title">相關文件下載</div>
+  <div class="three-col-layout">
+    <div class="page-card">
+      <div style="font-size:2.1rem;">📄</div>
+      <div class="card-main-title">設立/登記檔下載</div>
+      <div class="page-card-inner"><ul>
+        <li>公司設立申請表</li>
+        <li>工廠登記完整包</li>
+      </ul></div>      
+    </div>
+    <div class="page-card">
+      <div style="font-size:2.1rem;">📂</div>
+      <div class="card-main-title">財稅報表</div>
+      <div class="page-card-inner"><ul>
+        <li>財稅報表</li>
+        <li>報表範例</li>
+      </ul></div>
+    </div>
+    <div class="page-card">
+      <div style="font-size:2.1rem;">📝</div>
+      <div class="card-main-title">下載說明</div>
+      <div class="page-card-inner"><ul>
+        <li>表單註解</li>
+        <li>下載範例</li>
+      </ul></div>
+    </div>
+  </div>
+</div>
+
+<!-- 關於我們 -->
+<div class="page-section" id="about">
+  <div class="page-section-title">關於我們</div>
+  <div class="three-col-layout">
+    <div class="page-card">
+      <div class="card-main-title">專業團隊形象照</div>
+      <img src="generated-image-004.jpg" alt="專業團隊形象照" style="max-width:210px; margin-bottom:15px; border-radius:18px; box-shadow:0 2px 18px rgba(160,160,140,0.14);">
+      <div class="page-card-inner">
+        <ul>
+          <li>日盛國際團隊由資深記帳士、稅務顧問組成，</li>
+          <li>超過20年會計稅務專業服務經驗，</li>
+        </ul>
+      </div>
+    </div>
+    <div class="page-card">
+      <div class="card-main-title">企業夥伴</div>
+      <div class="card-desc">長期財會合作</div>
+      <div class="page-card-inner">
+        <ul>
+          <li>致力於成為企業、創業家的長期財會夥伴。</li>
+          <li>協助超過千家客戶圓滿達成財務目標與稅務優化。</li>
+        </ul>
+      </div>
+    </div>
+    <div class="page-card">
+      <div class="card-main-title">服務信念</div>
+      <div class="card-desc">專業・效率・誠信</div>
+      <div class="page-card-inner">
+        <ul>
+          <li>堅守專業、效率、誠信三大原則</li>
+          <li>重要方案陪同與輔導</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="cta-bar">☎ 客服專線：(02) 8994-4966 ｜ LINE官方ID ｜ Email：sunrise89944966@gmail.com</div>
+<footer>
+&copy; 2025 日盛國際聯合稅務記帳士事務所 | 版權所有
+</footer>
+<script>
+document.querySelectorAll('.nav-bar a').forEach(link=>{
+  link.addEventListener('click', function(e){
+    e.preventDefault();
+    document.querySelectorAll('.nav-bar a').forEach(a=>a.classList.remove('active'));
+    this.classList.add('active');
+    const targetId = this.getAttribute('href').replace('#','');
+    document.querySelectorAll('.page-section').forEach(sec=>{
+      if (sec.id === targetId) { sec.classList.add('active'); }
+      else { sec.classList.remove('active'); }
+    });
+    if(targetId==="faq") showFaqList();
+  });
+});
+function showFaqAns(number){
+  document.getElementById("faq-main-list").style.display="none";
+  for(let i=1;i<=10;i++){ document.getElementById("faq-ans-"+i).style.display="none"; }
+  document.getElementById("faq-ans-"+number).style.display="block";
+}
+function showFaqList(){
+  document.getElementById("faq-main-list").style.display="block";
+  for(let i=1;i<=10;i++){ document.getElementById("faq-ans-"+i).style.display="none"; }
+}
+document.querySelectorAll('.faq-question-list li').forEach(function(item){
+  item.addEventListener('click',function(){ showFaqAns(this.getAttribute("data-faq")); });
+});
+showFaqList();
+</script>
+</body>
+</html>
