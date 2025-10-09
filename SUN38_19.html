@@ -148,6 +148,15 @@
     .section-services .services-card ul ul li {list-style:circle;}
 
     /* --- Mobile View Adjustments (Consolidated) --- */
+    @media (max-width: 920px) {
+      .three-col-layout, .services-3col-layout {
+        gap: 20px;
+      }
+      .page-card, .services-card {
+        flex-basis: 45%;
+        min-width: 280px;
+      }
+    }
     @media (max-width: 800px) { 
       .home-flex-layout {
         flex-direction: column;
