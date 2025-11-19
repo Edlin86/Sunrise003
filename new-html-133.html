@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>食安領航 | 工廠專業輔導平台</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Noto+Sans+TC:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    html, body { height: 100%; }
+    body {
+      margin: 0;
+      font-family: 'Roboto', 'Noto Sans TC', 'Microsoft JhengHei', sans-serif;
+      background: #f8f9fa;
+      color: #21304c;
+      min-height: 100vh;
+      letter-spacing:0.01em;
+    }
+    /* --- Hero Section: 半版面動畫 --- */
+    .hero-ani {
+      position:relative;
+      width:100%;
+      min-height:52vh;
+      max-height: 540px;
+      display:flex;
+      align-items: center;
+      justify-content: center;
+      text-align:center;
+      overflow: hidden;
+      background: #123859;
+    }
+    .hero-bg {
+      position: absolute; left: 0; top: 0; width: 100%; height: 100%; z-index: 1;
+      object-fit: cover;
+      filter: blur(3px) brightness(0.58) grayscale(0.07);
+      transform: scale(1.1) translateY(-16px);
+      animation: bgZoom 2.1s cubic-bezier(.22,.7,.28,1.03);
+    }
+    @keyframes bgZoom {
+      0% { filter: blur(20px) brightness(0.34); transform: scale(1.15) translateY(30px);}
+      100% { filter: blur(3px) brightness(0.58); transform: scale(1.1) translateY(-16px);}
+    }
+    .hero-mask {
+      position:absolute; left:0; top:0; width:100%; height:100%; z-index:2;
+      background: linear-gradient(108deg, rgba(13,47,79,0.77) 65%, rgba(95,180,255,0.18) 100%);
+      pointer-events: none;
+      opacity: 0.92;
+      animation: fadein2 .8s .2s both;
+    }
+    @keyframes fadein2 { from {opacity:0;} to {opacity:0.92;} }
+    .hero-content {
+      position:relative; z-index:3; color:#fff; width:100%; max-width:650px; margin:0 auto; padding: 55px 25px 35px 25px;
+      display:flex;flex-direction:column;align-items:center;justify-content:center;gap: 1vw;
+      animation: txtFadeIn 1.6s .6s cubic-bezier(.18,1,.27,1.04) both;
+    }
+    @keyframes txtFadeIn {
+      0% { opacity:0; transform:translateY(38px);}
+      100%{ opacity:1; transform:none;}
+    }
+    .hero-content h1 {
+      margin-top: 0; margin-bottom: 24px; font-size: 2.3rem; font-weight:700; letter-spacing: 2px;
+      text-shadow: 0 2px 14px #fff3;
+      animation: fadeDownBig 1.05s 1.3s both;
+    }
+    .hero-content p {
+      margin-top: 0; margin-bottom: 30px; font-size: 1.20rem; color: #e8f4ff;
+      text-shadow: 0 2px 12px #a2c4ff26;
+      animation: fadeDownBig 1.08s 1.57s both;
+    }
+    @keyframes fadeDownBig {
+      0% { opacity:0; transform:translateY(-35px);}
+      100%{ opacity:1; transform:none;}
+    }
+    .brand-btn {
+      display: inline-block;
+      background: linear-gradient(90deg,#3296ff 55%,#4ebafe 100%);
+      color:#fff; font-size:1.07rem; border:none; border-radius:23px; padding:13px 44px 12px 44px;
+      font-weight:700; box-shadow:0 4px 16px #457bda73; transition:.21s;
+      letter-spacing:2px; margin-top:15px; margin-bottom:4px;
+      animation: fadeUpBtn 1.1s 1.98s both;
+      cursor:pointer;
+    }
+    .brand-btn:hover { background:#123859; color: #ffe053; transform:scale(1.09);}
+    @keyframes fadeUpBtn {
+      0% {opacity:0; transform: translateY(30px);}
+      100%{ opacity:1; transform: none;}
+    }
+    /* --- Page Main Layout --- */
+    .container { max-width: 1100px; margin: 0 auto; padding: 34px 16px; background:#fff7ee29; border-radius:22px;margin-top:26px;}
+    h2.section-title { font-size:1.5rem; color: #165297; border-left:6px solid #4ebafe; padding-left:14px;}
+    section { margin-bottom: 58px; }
+    /* 導覽樣式（原功能保留，可依需求調整）*/
+    nav {display:flex;gap:32px;background:rgba(248,249,250,0.7);border-radius:10px;padding:9px 18px;margin:26px auto 0 auto;max-width:870px;box-shadow:0 2px 8px #b7cff044;justify-content:center;}
+    nav a {color:#1872af; font-weight:700; text-decoration:none;padding:6px 5px 6px 8px;border-radius:8px 8px 0 0;transition:.18s;}
+    nav a.active,nav a:hover{background:linear-gradient(90deg,#eaf8ff,#bee0fb 90%);color:#123859;}
+    /* 響應式 */
+    @media (max-width: 850px) {
+      .hero-content h1{font-size:1.31rem;}
+      .hero-content p{font-size:1.07rem;}
+      .container{padding:2vw 2vw;}
+    }
+    @media (max-width: 600px) {
+      .hero-content{padding:44px 4vw 22px 4vw;}
+      .hero-content h1{font-size:1.05rem;}
+      .hero-ani{min-height:41vh;}
+    }
+  </style>
+</head>
+<body>
+  <!-- 首頁主視覺：半版動畫區  -->
+  <section class="hero-ani" id="hero">
+    <img src="GeminiBB-102.jpg" class="hero-bg" alt="主題背景"/>
+    <div class="hero-mask"></div>
+    <div class="hero-content">
+      <h1>食安領航，從工廠登記做起</h1>
+      <p>融合20年在地經驗，全程專業輔導，一站式協助工廠從選址到營運。<br>合規衛生，流程高效，信賴您的產業成長夥伴。</p>
+      <a href="#contact" class="brand-btn">立即諮詢</a>
+    </div>
+  </section>
+
+  <!-- 頁面主內容/導覽（依你的原HTML插入） -->
+  <nav>
+    <a href="#home" class="active">首頁</a>
+    <a href="#service">服務</a>
+    <a href="#guide">申請指引</a>
+    <a href="#laws">法規FAQ</a>
+    <a href="#case">案例</a>
+    <a href="#contact">聯絡我們</a>
+  </nav>
+  <main class="container">
+    <!-- 請將原有的所有 section, div, 內容按需求貼上或保留 -->
+    <h2 class="section-title" id="service">一站式整合服務</h2>
+    <!-- ... (省略其他內容，請保留原new-html-132的所有主結構，只需首段加上 .hero-ani區) -->
+    <section>
+      <h3>廠房規劃與設計</h3>
+      <p>依據您的製程需求與法規，打造最高效、合規的生產動線與空間配置。</p>
+      <!-- 你可依原內容繼續擴充 -->
+    </section>
+    <!-- ...其餘區塊不變（法規、教學、查核、案例、聯絡等） -->
+  </main>
+</body>
+</html>
