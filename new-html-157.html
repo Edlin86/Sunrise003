@@ -621,6 +621,42 @@
 
       .container { padding: 0 35px; }
       section { padding: 60px 0; }
+
+      /* --- 修改手機版 Hero 樣式 (針對您的需求) --- */
+      .hero {
+        /* 1. 恢復預設的置中對齊，這樣副標題和按鈕會留在中間 */
+        align-items: center; 
+        padding-top: var(--header-height);
+        height: 100vh; /* 恢復高度 */
+      }
+
+      .hero-content {
+        padding-top: 0;
+      }
+      
+      .hero h1 { 
+        font-size: 2.8rem; /* 字體加大 */
+        white-space: normal; 
+        font-weight: 800;
+        text-shadow: 0 0 10px rgba(0,0,0,0.8), 0 0 20px rgba(0,0,0,0.6); 
+        line-height: 1.3;
+
+        /* 2. 只移動標題：使用負邊距將標題往上拉，填補空缺 */
+        margin-top: -160px;
+        /* 3. 推開副標題：增加下方邊距，讓副標題不會跟著被拉上去，保持在原本位置 */
+        margin-bottom: 120px; 
+      }
+      
+      .hero p { 
+        font-size: 1.35rem; /* 字體加大 */
+        font-weight: 500;
+        text-shadow: 1px 1px 5px rgba(0,0,0,0.9);
+        line-height: 1.6;
+        margin-bottom: 30px;
+        /* 副標題沒有移動指令，會因為上方 margin-bottom 120px 的關係，自然停留在畫面較中間的位置 */
+      }
+      /* ------------------------------------------- */
+
       .cta-button { padding: 12px 25px; font-size: 0.9rem; }
       .section-title { font-size: 1.6rem; padding: 12px 20px; margin-bottom: 40px; }
 
@@ -641,36 +677,15 @@
       .step { padding: 15px; margin-bottom: 40px; }
       .step strong { font-size: 1rem; }
       .step-detail { font-size: 0.9rem; line-height: 1.6; }
+    }
 
-      /* --- 修正手機版文字位置 (滿足新需求) --- */
-      .hero {
-          /* 讓內容（副標題、按鈕）恢復預設的垂直置中 */
-          align-items: center; 
-          padding-top: var(--header-height);
-          
-          background-size: contain !important;
-          background-repeat: no-repeat !important;
-          background-position: center center !important;
-      }
-      
-      /* 將標題獨立抽離，固定在上方 (紅框位置) */
-      .hero h1 {
-          position: absolute;
-          top: 120px; /* 距離頂部 120px，避開 Header */
-          left: 0;
-          width: 100%;
-          padding: 0 15px;
-          margin: 0;
-          font-size: 2.2rem;
-          white-space: normal;
-          line-height: 1.3;
-      }
-
-      /* 副標題恢復原本位置 (自動在中央) */
-      .hero p {
-          font-size: 1rem;
-          margin-top: 0; /* 移除多餘間距 */
-      }
+    /* --- Responsive --- */
+    @media (max-width: 768px) {
+        .hero {
+            background-size: cover !important; 
+            background-repeat: no-repeat !important;
+            background-position: center center !important; 
+        }
     }
   
     /* --- Video Background --- */
